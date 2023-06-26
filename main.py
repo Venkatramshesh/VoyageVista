@@ -95,7 +95,7 @@ def upload_image_file():
             response.raise_for_status()  # Raise exception if invalid response
             return response.json()
 
-        api_key = "_bbvnXks0VwYSuaTp_BXSb_DM66RhwYonlwajXGHO1I"
+        api_key = "xxxx"
         search_term = city  # Replace with the city you're interested in
 
         results = search_images(search_term, api_key)
