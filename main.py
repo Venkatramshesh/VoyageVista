@@ -62,7 +62,7 @@ def upload_image_file():
 
         import openai
         # Initialize OpenAI Chat model
-        openai.api_key = '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'
+        openai.api_key = 'xxxxx'
         messages = [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": f"The request for suggested activity contains: {input_text}. Given a budget of {budget}$ Create an itinerary based on time duration of {time} hours. Give address of each location in Address: fromat in itinerary"},
