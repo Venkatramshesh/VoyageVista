@@ -43,11 +43,6 @@ def upload_image_file():
         occasion = request.form.get('occasion')
 
 
-        credential_path = "C:\\Users\\venka\\googlecloud\\nimble-crane-389713-9afc3d3b7aff.json"
-
-        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
-
-
         input_text = []
         input_text.append(city)
         input_text.append(condition)
