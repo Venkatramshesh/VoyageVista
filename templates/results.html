@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+            background-image: url("/static/image1.jpg");
+            background-size: cover;
+
+        }
+
+
+        .map-container {
+            display: flex;
+            justify-content: center;
+
+            height: 100vh;
+        }
+
+</style>
+</head>
+<body>
+<html>
+   <body>
+<img src={{ link }} width="250" height="250" class="center">
+<div style="text-align:center">
+
+</div>
+
+<h5>{% for line in lines %}
+        <p>{{ line }}</p>
+    {% endfor %}</h5> <br>
+
+   <div class="map-container">
+    <div id="map"></div>  {{ map | safe }}
+</div>
+
+
+
+
+   </body>
+</html>
+
+</body>

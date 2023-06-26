@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    body {
+            background-image: url("/static/image1.jpg");
+            background-size: cover;
+
+        }
+
+</style>
+
+</head>
+
+<html>
+   <body>
+
+
+     <h2>Welcome to exciting tours!!!</h2>
+      <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+
+ <h4>Please enter the city that you want to visit</h4>
+     <label for="city"></label>
+  <input type="text" id="city" name="city"><br>
+
+
+   <h4>Please select the type of activity that you want to do</h4>
+     <select name= condition method="GET" action="/">
+    {% for condition in condition %}
+    <option value= "{{condition}}" {% if condition == 'Bicycle tour' %} SELECTED {% endif %}>{{condition}}</option>"
+    {% endfor %}</select>
+
+
+           <h4>Select a time frame for the activity in hours</h4>
+
+
+         <input type="range" min="1" max="8" value="1" id="time" name="time">
+           <span id="sliderValue1">1</span>
+
+
+          <script>
+var slider1 = document.getElementById("time");
+var output1 = document.getElementById("sliderValue1");
+
+slider1.oninput = function() {
+  output1.textContent = this.value;
+}
+</script>
+           <h4>Time of year visiting</h4>
+     <select name= season method="GET" action="/">
+    {% for season in season %}
+    <option value= "{{season}}" {% if season == 'Fall' %} SELECTED {% endif %}>{{season}}</option>"
+    {% endfor %}
+</select>
+          <h4>How much are you willing to spend in $</h4>
+     <input type="range" min="0" max="200" value="0" id="budget" name="budget">
+           <span id="sliderValue2">0</span>
+
+
+          <script>
+var slider2 = document.getElementById("budget");
+var output2 = document.getElementById("sliderValue2");
+
+slider2.oninput = function() {
+  output2.textContent = this.value;
+}
+</script>
+
+           <h4>Select occasion of visit </h4>
+     <select name= occasion method="GET" action="/">
+    {% for occasion in occasion %}
+    <option value= "{{occasion}}" {% if occasion == 'Anniversary' %} SELECTED {% endif %}>{{occasion}}</option>"
+    {% endfor %}
+</select> <br>
+
+
+<br> <input type = "submit"/> (Please give 10-15 seconds for response)
+ </form>
+
+   </body>
+</html>
+
+</body>
+</html>
